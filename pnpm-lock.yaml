@@ -8,9 +8,6 @@ importers:
 
   .:
     dependencies:
-      '@tsconfig/node-ts':
-        specifier: ^23.6.1
-        version: 23.6.1
       dotenv:
         specifier: ^16.6.0
         version: 16.6.0
@@ -24,6 +21,9 @@ importers:
       '@tsconfig/node-lts':
         specifier: ^22.0.2
         version: 22.0.2
+      '@tsconfig/node-ts':
+        specifier: ^23.6.1
+        version: 23.6.1
       '@types/node':
         specifier: ^24.0.4
         version: 24.0.4

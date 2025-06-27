@@ -2,11 +2,23 @@
 
 ## Setup
 
+- `pnpm install`
+- Create `.env` from `.env.example`
+- Check your shell in `.npmrc`
+- `docker compose up -d`
+
+## Usage
+
+- `npm run db:push`
+- `npm run db:generate`
+- `npm run db:migrate`
+- `npm run db:prototype`
+
 ## Setup (from scratch)
 
 - `npm init es6`
-- `pnpm install -D typescript tsx @types/node @tsconfig/node-lts @tsconfig/node-ts cross-env`
 - `pnpm install dotenv drizzle-orm postgres`
+- `pnpm install -D drizzle-kit typescript tsx @types/node @tsconfig/node-lts @tsconfig/node-ts cross-env`
 
 `tsconfig.json`
 
@@ -33,7 +45,7 @@
   "scripts": {
     "db:generate": "cross-env NODE_OPTIONS='--import tsx' drizzle-kit generate",
     "db:push": "cross-env NODE_OPTIONS='--import tsx' drizzle-kit push",
-    "db:migrate": "tsx ./db/migrate.ts",
+    "db:migrate": "cross-env NODE_OPTIONS='--import tsx' drizzle-kit migrate",
     "db:prototype": "tsx ./db/prototype.ts"
   }
 }

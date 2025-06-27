@@ -26,11 +26,12 @@
   "scripts": {
     "db:generate": "cross-env NODE_OPTIONS='--import tsx' drizzle-kit generate",
     "db:push": "cross-env NODE_OPTIONS='--import tsx' drizzle-kit push",
-    "db:migrate": "tsx ./db/migrate.ts",
+    "db:migrate": "cross-env NODE_OPTIONS='--import tsx' drizzle-kit migrate",
     "db:prototype": "tsx ./db/prototype.ts"
   },
   "devDependencies": {
     "@tsconfig/node-lts": "^22.0.2",
+    "@tsconfig/node-ts": "^23.6.1",
     "@types/node": "^24.0.4",
     "cross-env": "^7.0.3",
     "drizzle-kit": "^0.31.3",
@@ -38,7 +39,6 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@tsconfig/node-ts": "^23.6.1",
     "dotenv": "^16.6.0",
     "drizzle-orm": "^0.44.2",
     "postgres": "^3.4.7"
