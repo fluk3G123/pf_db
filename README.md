@@ -6,7 +6,7 @@
 - Create `.env` from `.env.example`
 - Check your shell in `.npmrc`
 - For Windows, run `npm run eol` (take care of CRLF issue)
-- `docker compose up -d
+- `docker compose up -d`
 
 ## Usage
 
