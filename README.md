@@ -4,7 +4,7 @@
 
 - `pnpm install`
 - Create `.env` from `.env.example`
-- Check your shell in `.npmrc`
+- Create `.npmrc` from `.npmrc.example` (only for Windows user)
 - For Windows, run `npm run eol` (take care of CRLF issue)
 - `docker compose up -d`
 
